@@ -1,0 +1,235 @@
+
+/* article.css */
+.article {
+    @apply text-gray-700 dark:text-gray-300 text-base leading-relaxed;
+}
+
+/* Remove top margin on first child, bottom margin on last child */
+.article > *:first-child {
+    @apply mt-0;
+}
+
+.article > *:last-child {
+    @apply mb-0;
+}
+
+/* Headings */
+.article h1 {
+    @apply text-3xl font-bold text-gray-900 dark:text-white mt-10 mb-4 leading-tight;
+}
+
+.article h2 {
+    @apply text-2xl font-medium text-gray-900 dark:text-white mt-5 mb-3 leading-tight scroll-mt-20;
+}
+
+.article h3 {
+    @apply text-xl font-semibold text-gray-900 dark:text-white mt-8 mb-3 leading-snug scroll-mt-20;
+}
+
+.article h4 {
+    @apply text-lg font-semibold text-gray-900 dark:text-white mt-6 mb-2 leading-snug;
+}
+
+.article h5 {
+    @apply text-base font-semibold text-gray-900 dark:text-white mt-6 mb-2;
+}
+
+.article h6 {
+    @apply text-sm font-semibold uppercase tracking-wide text-gray-600 dark:text-gray-400 mt-6 mb-2;
+}
+
+/* Text */
+.article p {
+    @apply mb-4;
+}
+
+.article a {
+    @apply text-blue-600 dark:text-blue-400 underline underline-offset-2 decoration-blue-300 dark:decoration-blue-600 hover:text-blue-700 dark:hover:text-blue-300 transition-colors;
+}
+
+.article strong {
+    @apply font-semibold text-gray-900 dark:text-white;
+}
+
+.article em {
+    @apply italic;
+}
+
+.article small {
+    @apply text-sm text-gray-500 dark:text-gray-400;
+}
+
+.article mark {
+    @apply bg-yellow-200 dark:bg-yellow-500/30 text-gray-900 dark:text-white px-1 rounded;
+}
+
+.article del {
+    @apply line-through text-gray-500 dark:text-gray-500;
+}
+
+.article ins {
+    @apply underline text-gray-900 dark:text-white  bg-green-100 dark:bg-green-500/20;
+}
+
+.article sub {
+    @apply text-xs align-sub;
+}
+
+.article sup {
+    @apply text-xs align-super;
+}
+
+.article abbr {
+    @apply underline decoration-dotted cursor-help;
+}
+
+.article kbd {
+    @apply bg-gray-100 dark:bg-gray-800 border border-gray-300 dark:border-gray-600 rounded px-1.5 py-0.5 text-xs font-mono shadow-sm;
+}
+
+/* Lists */
+.article ul {
+    @apply list-disc list-outside pl-6 mb-4 space-y-2;
+}
+
+.article ol {
+    @apply list-decimal list-outside pl-6 mb-4 space-y-2;
+}
+
+.article li {
+    @apply leading-relaxed pl-1;
+}
+
+.article li > ul,
+.article li > ol {
+    @apply mt-2 mb-0;
+}
+
+.article li::marker {
+    @apply text-gray-400 dark:text-gray-500;
+}
+
+/* Task lists (GFM checkboxes) */
+.article li:has(input[type="checkbox"]) {
+    @apply list-none -ml-6 flex items-start gap-2;
+}
+
+.article input[type="checkbox"] {
+    @apply mt-1.5 rounded border-gray-300 dark:border-gray-600 dark:bg-gray-800;
+}
+
+/* Definition lists */
+.article dl {
+    @apply mb-4;
+}
+
+.article dt {
+    @apply font-semibold text-gray-900 dark:text-white mt-4;
+}
+
+.article dd {
+    @apply pl-4 mt-1 text-gray-600 dark:text-gray-400;
+}
+
+/* Blockquote */
+.article blockquote {
+    @apply border-l-4 border-gray-300 dark:border-gray-600 pl-4 italic text-gray-600 dark:text-gray-400 my-6;
+}
+
+.article blockquote p {
+    @apply mb-2 block italic text-gray-500 dark:text-gray-500 mt-2;
+}
+
+.article blockquote cite {
+    @apply block not-italic text-sm text-gray-500 dark:text-gray-500 mt-2;
+}
+
+/* Code */
+.article code {
+    @apply bg-gray-100 dark:bg-gray-800 text-gray-800 dark:text-gray-200 px-1.5 py-0.5 rounded text-sm font-mono;
+}
+
+.article pre {
+    @apply bg-gray-100 dark:bg-gray-800 rounded-lg p-4 overflow-x-auto mb-6 text-sm;
+}
+
+.article pre code {
+    @apply bg-transparent p-0 rounded-none text-gray-800 dark:text-gray-200;
+}
+
+/* Horizontal rule */
+.article hr {
+    @apply border-gray-200 dark:border-gray-700 my-8;
+}
+
+/* Tables */
+.article table {
+    @apply w-full border-collapse mb-3 text-sm;
+}
+
+.article thead {
+    @apply bg-gray-100 dark:bg-gray-800;
+}
+
+.article th {
+    @apply border border-gray-300 dark:border-gray-600 px-3 py-2 text-left font-semibold text-gray-900 dark:text-white;
+}
+
+.article td {
+    @apply border border-gray-300 dark:border-gray-600 px-3 py-2;
+}
+
+.article tbody tr:nth-child(even) {
+    @apply bg-gray-50 dark:bg-gray-800/50;
+}
+
+.article caption {
+    @apply text-sm text-gray-500 dark:text-gray-400 mt-2 text-left;
+}
+
+/* Media */
+.article img {
+    @apply rounded-lg my-6 max-w-full h-auto;
+}
+
+.article figure {
+    @apply my-6;
+}
+
+.article figcaption {
+    @apply text-sm text-gray-500 dark:text-gray-400 text-center mt-2;
+}
+
+.article video {
+    @apply rounded-lg my-6 max-w-full;
+}
+
+.article iframe {
+    @apply rounded-lg my-6 w-full aspect-video;
+}
+
+/* Details / summary */
+.article details {
+    @apply border border-gray-200 dark:border-gray-700 rounded-lg p-4 mb-4;
+}
+
+.article summary {
+    @apply font-semibold text-gray-900 dark:text-white cursor-pointer select-none;
+}
+
+.article details[open] summary {
+    @apply mb-3;
+}
+
+/* Footnotes (common in markdown processors) */
+.article .footnotes {
+    @apply mt-10 pt-6 border-t border-gray-200 dark:border-gray-700 text-sm text-gray-600 dark:text-gray-400;
+}
+
+.article .footnotes ol {
+    @apply pl-4;
+}
+
+.article .footnote-backref {
+    @apply no-underline ml-1;
+}
