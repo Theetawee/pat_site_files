@@ -21,7 +21,7 @@
 @custom-variant dark (&:where(.dark, .dark *));
 
 * {
-    font-family: "Google Sans", sans-serif;
+    font-family: "Google Sans", sans-serif !important;
 }
 
 button {
